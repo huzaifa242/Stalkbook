@@ -22,4 +22,4 @@ To run Frontend Server
 
 • The Application will be live on ````http://localhost:4200/````
 
-*Now you are Ready to Stalk Profiles*
+*Now you are Ready to Stalk Profiles.*
