@@ -1,0 +1,17 @@
+<mat-nav-list *ngIf="auth.isLoggedIn()">
+  <a mat-list-item  *ngFor="let nav of lNav">
+    <i class="material-icons">
+      {{nav.icon}}
+    </i>
+    <a routerLink="{{nav.url}}">{{nav.name}}</a>
+  </a>
+</mat-nav-list>
+<mat-nav-list>
+  <a mat-list-item  *ngFor="let nav of fillNav">
+    <i class="material-icons">
+      {{nav.icon}}
+    </i>
+    <a routerLink="{{nav.url}}">{{nav.name}}</a>
+  </a>
+</mat-nav-list>
+<!-- 7 without login-->

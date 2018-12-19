@@ -1,0 +1,15 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding-top: 3%;
+}
+.pad{
+  padding-top: 3%;
+}
+.example-container > * {
+  width: 100%;
+}
+table {
+  width: 70%;
+}

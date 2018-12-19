@@ -1,0 +1,50 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="example-toolbar blk">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name example-fill-remaining-space">StalkBook</h1>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a *ngIf="!auth.isLoggedIn()" mat-menu-item routerLink="/login">
+        Login
+      </a>
+      <a *ngIf="!auth.isLoggedIn()" mat-menu-item routerLink="/signup">
+        SignUp
+      </a>
+      <a *ngIf="auth.isLoggedIn()"  mat-menu-item routerLink="/profile">
+        Profile
+      </a>
+      <a *ngIf="auth.isLoggedIn()"  mat-menu-item (click)="auth.logout()">
+        Logout
+      </a>
+    </mat-menu>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+     <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <!--other Components-->
+      <router-outlet></router-outlet>
+      <div class="pad"></div>
+      <div style="position: fixed; right:2em; bottom: 4em;">
+
+        <i class="material-icons" style="font-size: 250%; color: mediumvioletred">
+          favorite
+        </i>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <mat-toolbar color="primary" class="blk" style="position: relative; bottom: 0">
+    <div style="font-size: small">
+      &copy;2018 Stalkbook
+    </div>
+  </mat-toolbar>
+</div>

@@ -1,0 +1,48 @@
+<div align="center">
+  <!--{{formdata.controls['password'].value}}
+  <br>
+  {{formdata.controls['cpassword'].value}}-->
+  <form [formGroup]="formdata" (ngSubmit) = "onSubmit()">
+    <div class="example-container">
+      <h1 class="pad" style="color:black;font-size: 300%; ">SignUp</h1>
+      <mat-form-field class="pad">
+        <input matInput placeholder="First Name" formControlName="fname">
+      </mat-form-field>
+      <mat-form-field class="pad">
+        <input matInput placeholder="Last Name" formControlName="lname">
+      </mat-form-field>
+      <mat-form-field class="pad">
+        <input matInput placeholder="UserName"  formControlName="_id" required>
+      </mat-form-field>
+      <mat-form-field class="pad">
+        <input matInput placeholder="Enter your email" formControlName="email" required>
+        <!--<mat-error *ngIf="formdata.hasError('email')">Invalid Email</mat-error>-->
+      </mat-form-field>
+      <mat-form-field class="pad">
+        <input type="password" matInput placeholder="Password" formControlName="password" required>
+      </mat-form-field>
+      <mat-form-field class="pad">
+        <input type="password" matInput placeholder="Confirm Password" formControlName="cpassword" required >
+        <!--<mat-error *ngIf="formdata.hasError('notsame')">Both Passwords MISMATCH!!!</mat-error>-->
+      </mat-form-field>
+      <mat-form-field class="pad">
+        <mat-select placeholder="Institute" formControlName="institute">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="pad">
+        <mat-select placeholder="Country" formControlName="country">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="pad">
+        <input matInput placeholder="CodeForces handle" formControlName="codeforces_handle" required>
+      </mat-form-field>
+    </div>
+    <div class="pad">
+      <button mat-raised-button color="primary" [disabled]="!formdata.valid" type="submit">Sign Up</button>
+    </div>
+  </form>
+</div>

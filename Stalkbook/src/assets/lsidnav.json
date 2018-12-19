@@ -1,0 +1,16 @@
+[{"icon":"drafts",
+  "name":"Notification",
+  "url": "/home"},
+  {"icon":"person",
+    "name":"Custom Friend",
+    "url": "/customfriend"},
+  {"icon":"people",
+    "name":"Your Friend",
+    "url": "/friends"},
+  {"icon":"view_list",
+    "name":"Todo List",
+    "url": "/home"},
+  {"icon":"search",
+    "name":"Search Friends",
+    "url": "/home"}
+]

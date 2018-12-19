@@ -1,0 +1,20 @@
+[{"icon":"calendar_today",
+"name":"Upcoming Contests",
+    "url": "/home"},
+  {"icon":"local_offer",
+"name":"Search Problems",
+    "url": "/home"},
+  {"icon":"bar_chart",
+"name":"Leaderboard",
+    "url": "/home"},
+  {"icon":"trending_up",
+"name":"Trending Problems",
+    "url": "/trendingproblems"},
+  {"icon":"filter_list",
+"name":"Submission Filters",
+    "url": "/home"},
+  {"icon":"face",
+"name":"Testimonials",
+    "url": "/home"}
+]
+

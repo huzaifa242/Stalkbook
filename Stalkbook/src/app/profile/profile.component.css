@@ -1,0 +1,21 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding-top: 3%;
+}
+.pad{
+  padding-top: 3%;
+}
+.example-container > * {
+  width: 100%;
+}
+table {
+  width: 60%;
+}
+
+.bky{
+  background-color: #ffd740;
+  color: black;
+  border-radius: 15px;
+}

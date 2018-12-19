@@ -1,0 +1,75 @@
+<div align="center">
+  <div class="pad">
+      <div class="button-raw">
+        <button mat-raised-button  class="bky"
+                matTooltip="Codechef"
+                aria-label="Button that displays a tooltip when focused or hovered over">CodeChef
+        </button>
+        <button mat-raised-button class=" bky"
+                matTooltip="CodeForces"
+                aria-label="Button that displays a tooltip when focused or hovered over">CodeForces
+        </button>
+        <button mat-raised-button class=" bky"
+                matTooltip="HackerEarth"
+                aria-label="Button that displays a tooltip when focused or hovered over">HackerEarth
+        </button>
+        <button mat-raised-button  class=" bky"
+                matTooltip="HackerRank"
+                aria-label="Button that displays a tooltip when focused or hovered over">HackerRank
+        </button>
+        <button mat-raised-button  class=" bky"
+                matTooltip="Spoj"
+                aria-label="Button that displays a tooltip when focused or hovered over">Spoj
+        </button>
+        <button mat-raised-button  class="bky"
+                matTooltip="UVa"
+                aria-label="Button that displays a tooltip when focused or hovered over">UVa
+        </button>
+        <button mat-raised-button  class="bky"
+                matTooltip="Timus"
+                aria-label="Button that displays a tooltip when focused or hovered over">Timus
+        </button>
+      </div>
+      <div align="center">
+      <h3>Problems Solved</h3>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
+        <ng-container matColumnDef="CodeChef">
+          <th mat-header-cell *matHeaderCellDef> CodeChef </th>
+          <td mat-cell *matCellDef="let element"> {{element.CodeChef}} </td>
+        </ng-container>
+        <ng-container matColumnDef="CodeForces">
+          <th mat-header-cell *matHeaderCellDef> CodeForces </th>
+          <td mat-cell *matCellDef="let element"> {{element.CodeForces}} </td>
+        </ng-container>
+        <ng-container matColumnDef="HackerEarth">
+          <th mat-header-cell *matHeaderCellDef> HackerEarth </th>
+          <td mat-cell *matCellDef="let element"> {{element.HackerEarth}} </td>
+        </ng-container>
+        <ng-container matColumnDef="HackerRank">
+          <th mat-header-cell *matHeaderCellDef> HackerRank </th>
+          <td mat-cell *matCellDef="let element"> {{element.HackerRank}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Spoj">
+          <th mat-header-cell *matHeaderCellDef> Spoj </th>
+          <td mat-cell *matCellDef="let element"> {{element.Spoj}} </td>
+        </ng-container>
+        <ng-container matColumnDef="UVa">
+          <th mat-header-cell *matHeaderCellDef> UVa </th>
+          <td mat-cell *matCellDef="let element"> {{element.UVa}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Timus">
+          <th mat-header-cell *matHeaderCellDef> Timus </th>
+          <td mat-cell *matCellDef="let element"> {{element.Timus}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      </div>
+      <div align="center">
+        <h3>Total Submissions</h3>
+        <google-chart [data]="pieChartData"></google-chart>
+        <h3>Contest Ratings</h3>
+        <google-chart [data]="pieChartData1"></google-chart>
+      </div>
+</div>
+</div>

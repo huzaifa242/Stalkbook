@@ -1,0 +1,21 @@
+<div align="center">
+  <form (ngSubmit)="logauth($event)">
+    <div class="example-container">
+      <h1 style="color:black;font-size:300% ">Login</h1>
+      <mat-form-field class="pad">
+        <input matInput placeholder="Username" id="username">
+      </mat-form-field>
+      <mat-form-field class="pad">
+        <input type="password" matInput placeholder="Password" id="password">
+      </mat-form-field>
+    </div>
+    <div class="pad">
+      <mat-checkbox>Remember Me</mat-checkbox>
+    </div>
+    <div class="pad">
+      <button type="submit" mat-raised-button color="primary" >Log In</button>
+      <button mat-raised-button color="primary" routerLink="/signup">Sign Up</button>
+      <button mat-raised-button color="primary">Forgot Password</button>
+    </div>
+  </form>
+</div>

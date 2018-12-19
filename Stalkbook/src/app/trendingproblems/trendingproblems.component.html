@@ -1,0 +1,33 @@
+<div class="pad row">
+  <div align="center">
+    <h1 style="color:black;font-size:300% ">Trending Problems</h1>
+  </div>
+  <div class="pad" align="center">
+      <div align="center">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef style="font-size: small"> Name </th>
+            <td mat-cell *matCellDef="let element" style="font-size: small"> {{element.name}} </td>
+          </ng-container>
+          <ng-container matColumnDef="code" >
+            <th mat-header-cell *matHeaderCellDef style="font-size: small"> Code </th>
+            <td mat-cell *matCellDef="let element" style="font-size: small"> {{element.code}} </td>
+          </ng-container>
+          <ng-container matColumnDef="site">
+            <th mat-header-cell *matHeaderCellDef style="font-size: small"> Site </th>
+            <td mat-cell *matCellDef="let element" style="font-size: small"> {{element.site}} </td>
+          </ng-container>
+          <ng-container matColumnDef="submissions">
+            <th mat-header-cell *matHeaderCellDef style="font-size: small"> Submissions </th>
+            <td mat-cell *matCellDef="let element" style="font-size: small"> {{element.submissions}} </td>
+          </ng-container>
+          <ng-container matColumnDef="accuracy">
+            <th mat-header-cell *matHeaderCellDef style="font-size: small"> Accuracy </th>
+            <td mat-cell *matCellDef="let element" style="font-size: small"> {{element.accuracy}} </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+  </div>
+</div>
